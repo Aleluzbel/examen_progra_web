@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+</head>
+<body>
+    <div class="form-container">
+        <h1>Inicio de sesión</h1>
+        <form method="POST">
+            <input type="text" name="usuario" placeholder="Ingresa tu nombre" required><br>
+            <input type="password" name="contrasena" placeholder="Ingresa tu contraseña" required><br>
+            <input type="submit" value="Verificar">
+        </form>
+
+        {% if mensaje %}
+        <div class="result">
+            <p>{{ mensaje }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
